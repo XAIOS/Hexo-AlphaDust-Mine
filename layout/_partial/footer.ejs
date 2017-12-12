@@ -1,0 +1,28 @@
+<div class=push></div>
+
+<footer class=footer-content>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+        <h2><%- __('about') %></h2>
+        <section>
+          <%- theme.footer_about %>
+        </section>
+      </div>
+      <%- partial('footer_recent_posts') %>
+      <%- partial('footer_categories') %>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul class="list-inline footer-social-icons"></ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="footer-copyright">
+          <%- theme.footer_copyright %>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
