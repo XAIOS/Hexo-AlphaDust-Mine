@@ -3,9 +3,7 @@
   <div class=post-header>
     <h1 class=title><%- item.title %></h1>
     <div class=post-info>
-      <% if(item.date) {%>
-        <span class=date><%= item.date.format(config.date_format) %></span>
-      <% } %>
+      <span class=date><%= item.date.format(config.date_format) %></span>
 
       <% if(item.categories && item.categories.first()) {%>
         <span class="category">
@@ -21,16 +19,14 @@
       <%- partial('gallery') %>
     <% } %>
 
-    <!-- Post Content -->
     <%- item.content %>
+    <span class='date end-date'><%= item.date.format(config.date_format) %></span>
   </div>
 
   <%
-    var tags = [];
+    var tags = []
     if(item.tags && item.tags.length)
-      item.tags.forEach(function(tag){
-        tags.push('<a href="' + config.root + tag.path + '">#' + tag.name + '</a>')
-      })
+      item.tags.forEach(tag => tags.push(`<a href=${config.root}${tag.path}>#${tag.name}</a>`) )
   %>
 
   <% if(tags.length) {%>

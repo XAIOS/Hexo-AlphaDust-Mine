@@ -7,54 +7,45 @@ section.main
     .post-header
       position relative
       width 100%
-      margin 0 10px
-      &:before
+      &:before, &:after
+        content ''
         position absolute
-        padding 5px
         top -10px
         bottom -10px
-        left -5px
-        content "  "
-        border-left 1px solid $mainColor1
-        border-bottom 1px solid $mainColor1
+        padding 5px
         border-top 1px solid $mainColor1
-        transition: left 0.3s ease
+        border-bottom 1px solid $mainColor1
         @media $sm
           display none
+      &:before
+        left -5px
+        border-left 1px solid $mainColor1
+        transition: left 0.3s ease
       &:after
-        position absolute
-        content "  "
-        padding 5px
-        top -10px
-        bottom -10px
         right -5px
         border-right 1px solid $mainColor1
-        border-bottom 1px solid $mainColor1
-        border-top 1px solid $mainColor1
         transition: right 0.3s ease
-        @media $sm
-          display none
       h1.title
-        text-align: center
         font-family: $fontTitle
-        text-shadow: $titleTextShadow
-        cursor pointer
-        a, a:link, a:visited, a:active
-          border-bottom none
+        text-align: center
+        transition all .3s
         @media $xs
            font-size 2.5em
       .post-info
         margin-top: 15px
         text-align: center
         text-transform: uppercase
+        transition all .3s
         font-family: $fontTitle
         span
           padding: 10px
-      &.hover
-        &:before
-          left 5px
-        &:after
-          right 5px
+    .post-header.animation:hover
+      h1.title, .post-info
+        text-shadow: $titleTextShadow
+      &:before
+        left 10px
+      &:after
+        right 10px
     .content
       margin-top: 65px
       @media $xs
@@ -64,7 +55,7 @@ section.main
         width 100%
         display block
         &:after
-          content " "
+          content ''
           visibility hidden
           display block
           height 50px
@@ -81,6 +72,7 @@ section.main
               padding-right 20px
               width 100%
     .read-more
+      float right
       margin: 10px auto
       font-family $fontTitle
       text-transform uppercase
