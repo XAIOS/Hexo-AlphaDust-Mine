@@ -1,16 +1,15 @@
 <!DOCTYPE HTML>
 <%- partial('_partial/head') %>
 
-<body>
-  <div class=bg-gradient></div>
-  <div class=bg-pattern></div>
-
-  <%- partial('_partial/menu') %>
-
-  <div class=container>
-    <%- body %>
+<body oncontextmenu='return false'>
+  <div class=aios_content>
+    <div class=bg-gradient></div>
+    <div class=bg-pattern></div>
+    <%- partial('_partial/menu') %>
+    <div class=container>
+      <%- body %>
+    </div>
   </div>
-
   <%- partial('_partial/footer') %>
 </body>
 <%- partial('_partial/scripts') %>

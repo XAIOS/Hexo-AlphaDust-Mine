@@ -1,11 +1,9 @@
-fa_logo:              fa-terminal
-
 menu:
   Home:               /
   Docs:               /archives
 
 archive_date_format:  MMM YYYY
 
-footer_about:         'Theme developed by <a href=//github.com/klugjo target=_blank>Jonathan Klughertz</a><br>Contents created by <a href=//github.com/xaios target=_blank>AIOS</a>'
+about:                'Theme developed by <a href=//github.com/klugjo target=_blank>Jonathan Klughertz</a><br>Contents created by <a href=//github.com/xaios target=_blank>AIOS</a>'
 
-footer_copyright:     '@Untitled. All right reserved | Design & Hexo <a href=//www.codeblocq.com target=_blank>Jonathan Klughertz</a>'
+copyright:            '@Untitled. All right reserved | Design & Hexo <a href=//www.codeblocq.com target=_blank>Jonathan Klughertz</a>'
